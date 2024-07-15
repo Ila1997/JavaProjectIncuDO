@@ -28,13 +28,20 @@ Puoi clonare il repository eseguendo il seguente comando:
 
 `git clone https://github.com/Ila1997/JavaProjectIncuDO.git`
 
-## Eseguire l'applicazione:
+## Eseguire l'applicazione da Eclipse:
 
 1. Creare il file "MANIFEST.MF" contenente le seguenti righe: </br> `Manifest-Version: 1.0` </br> `Main-Class: view.Main`
 2. Da Eclipse fare clic destro sulla cartella <strong>src</strong>, selezionare <strong>Export</strong>, espandere la categoria <strong>Java</strong>, selezionare <strong>Runnable JAR file</strong> e fare click su <strong>next</strong>. </br> Selezionare il progetto e la classe 'view.Main', dare il nome al file, assicurarsi di aver selezionato l'opzione <strong>Package required libraries into generated JAR</strong> e fare click su <strong>Finish</strong>.
 3. Per lanciare l'applicazione attraverso il file .jar appena generato, eseguire il seguente comando: </br>
 `java -jar nomeFileJar.jar`
 
-## Eseguire l'applicazione solo con il file `.JAR`:
+## Eseguire l'applicazione da terminale:
+
+1. Creare il file "MANIFEST.MF" con i seguenti comandi:</br> `echo "Manifest-Version: 1.0" > MANIFEST.MF` </br> `echo "Main-Class: view.Main" >> MANIFEST.MF`
+2. Creare il file .jar con il seguente comando: </br> `jar cfm Project.jar MANIFEST.MF -C bin .`
+3. Per lanciare l'applicazione attraverso il file .jar appena generato, eseguire il seguente comando: </br>
+`java -jar nomeFileJar.jar`
+
+## Eseguire l'applicazione solo con il file `.jar`:
 
 Per lanciare l'applicazione utilizzando solo il file .jar eseguire il comando </br>`java -jar nomeFileJar.jar`
